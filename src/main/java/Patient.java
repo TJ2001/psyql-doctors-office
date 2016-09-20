@@ -50,6 +50,15 @@ public class Patient{
     }
   }
 
+  public static List<Patient> all(int id) {
+    String sql = "SELECT * from patients WHERE doctorId = :id";
+    try(Connection con = DB.sql2o.open()) {
+      return con.createQuery(sql)
+      .addParameter("id", id)
+      .executeAndFetch(Patient.class);
+    }
+  }
+
   @Override
   public boolean equals(Object otherPatient) {
     if (!(otherPatient instanceof Patient)) {

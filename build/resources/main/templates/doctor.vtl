@@ -1,0 +1,11 @@
+
+<h1>$doctor.getName() patients:</h1>
+
+<ul>
+  #foreach($task in $doctor.getPatients())
+   <li>$patient.getName()</li>
+  #end
+</ul>
+
+<a href="/doctors/$doctor.getId()/patients/new">Add a new patient</a>
+<a href="/doctors">All doctors</a>

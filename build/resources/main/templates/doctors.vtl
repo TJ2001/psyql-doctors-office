@@ -1,0 +1,11 @@
+<h1>All Doctors</h1>
+<ul>
+  #foreach ($doctor in $doctors)
+    <li>
+      <a href="/doctors/$doctor.getId()">$doctor.getName()</a>
+      <a class="btn btn-danger" href="/doctors/$doctor.getId()/delete">Delete</a>
+    </li>
+
+  #end
+  <a href="/doctor/new">Add New Doctor</a>
+</ul>
