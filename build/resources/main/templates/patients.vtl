@@ -1,14 +1,11 @@
 
 <h1>Patient list!</h1>
 
-#if ($patients.length.size() != 0)
+
   <ul>
     #foreach ($patient in $patients)
-      <li><a href="/patients/$patient.getId()">$patient.getName()</a></li>
+      <li>Name: $patient.getName()<br> Birthday: $patient.getBirthday()</li>
     #end
   </ul>
-#else
-  <p>No patients!</p>
-#end
 
 <a href="/doctors/$doctor.getId()/patients/new">Add New Patient</a>

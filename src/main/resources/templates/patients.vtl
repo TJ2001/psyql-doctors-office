@@ -4,7 +4,7 @@
 
   <ul>
     #foreach ($patient in $patients)
-      <li><a href="/patients/$patient.getId()">$patient.getName()</a></li>
+      <li>Name: $patient.getName()<br> Birthday: $patient.getBirthday()</li>
     #end
   </ul>
 
