@@ -2,7 +2,7 @@
 <ul>
   #foreach ($doctor in $doctors)
     <li>
-      <a href="/doctors/$doctor.getId()">$doctor.getName()</a>
+      <a href="/doctors/$doctor.getId()/patients">$doctor.getName()</a>
       <a class="btn btn-danger" href="/doctors/$doctor.getId()/delete">Delete</a>
     </li>
 
